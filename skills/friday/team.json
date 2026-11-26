@@ -1,0 +1,47 @@
+{
+  "name": "friday",
+  "version": "0.1.0",
+  "roles": [
+    {
+      "id": "admin",
+      "delegates": [],
+      "instructions": "agents/friday-admin.md",
+      "skills": [
+        "skills/mail-summary/SKILL.md",
+        "skills/schedule-meeting/SKILL.md"
+      ]
+    },
+    {
+      "id": "pm",
+      "delegates": [],
+      "instructions": "agents/friday-pm.md",
+      "skills": [
+        "skills/project-status/SKILL.md"
+      ]
+    },
+    {
+      "id": "system-architect",
+      "delegates": [],
+      "instructions": "agents/friday-system-architect.md",
+      "skills": []
+    },
+    {
+      "id": "developer",
+      "delegates": [],
+      "instructions": "agents/friday-developer.md",
+      "skills": []
+    },
+    {
+      "id": "reviewer",
+      "delegates": [],
+      "instructions": "agents/friday-reviewer.md",
+      "skills": []
+    },
+    {
+      "id": "verifier",
+      "delegates": [],
+      "instructions": "agents/friday-verifier.md",
+      "skills": []
+    }
+  ]
+}

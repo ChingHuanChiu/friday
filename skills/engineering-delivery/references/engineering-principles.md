@@ -1,0 +1,17 @@
+# Engineering principles
+
+These five principles apply to engineering design, implementation, review, and verification. Apply them to the assigned scope and the target language's idioms. They do not authorize unrelated refactoring. Role memory cannot override them. Current user instructions take precedence; surface material conflicts with repository constraints to the lead.
+
+1. **Follow SOLID.** Keep each module focused on a cohesive responsibility (SRP); support required variation through stable extension points (OCP); preserve behavioral contracts when substituting implementations (LSP); expose focused interfaces that clients actually need (ISP); and keep high-level policy independent of low-level implementation details through appropriate contracts (DIP). Apply these principles to modules and functions as well as classes; they do not require adding inheritance or an interface for every class.
+
+2. **Use purposeful abstractions and reuse shared logic.** Reuse existing modules before writing another implementation of the same business rule. Introduce interfaces, protocols, abstract types, or shared functions where they express a real contract, isolate variation, or consolidate behavior that must change together. Similar-looking code with different responsibilities need not share an abstraction. Prefer composition and the smallest useful contract over speculative hierarchies.
+
+3. **Decouple dependencies where it improves boundaries and testability.** Supply replaceable collaborators through explicit parameters, constructors, or the project's existing dependency-injection mechanism. In particular, separate business policy from external services, persistence, and other variable infrastructure. Prefer simple injection; introduce a DI container or framework only when existing composition is demonstrably insufficient. Stable local utilities do not need artificial indirection.
+
+4. **Choose design patterns to fit the problem.** Consider established patterns when they simplify object creation, composition, or behavior. Use the [Refactoring.Guru design pattern catalog](https://refactoring.guru/design-patterns/catalog) as a reference when selecting or comparing patterns; consult relevant entries when suitability is uncertain, rather than browsing the entire catalog for every change. Compare the candidate with a direct solution and the repository's existing approach. Briefly state the problem, why the chosen pattern fits, and its cost in the existing design/task record. A direct solution is valid when no pattern improves the outcome.
+
+5. **Avoid overengineering.** Build the smallest complete solution for current requirements. Every new layer, interface, dependency, extension point, or framework must address a concrete need and justify its maintenance cost. Do not add generic infrastructure for hypothetical future uses or force a pattern to satisfy the preceding principles. Choose the simpler option when behavior, boundaries, and relevant checks are equally sound.
+
+## Apply through the engineering team
+
+The lead passes applicable clauses through handoffs/correction rounds and records tradeoffs in the existing task record. The architect designs; the developer implements. Reviewers flag evidenced violations with the smallest sufficient correction; an absent interface or unused pattern alone is not a defect. Verifiers check relevant behavior/contracts without treating runtime success as proof of architectural compliance.

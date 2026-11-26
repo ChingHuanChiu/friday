@@ -1,0 +1,14 @@
+{
+  "name": "friday-local",
+  "description": "Friday personal assistant team for Codex and Claude Code",
+  "owner": {
+    "name": "Friday"
+  },
+  "plugins": [
+    {
+      "name": "friday",
+      "source": "./",
+      "description": "Friday engineering-management assistant team"
+    }
+  ]
+}
